@@ -7,7 +7,7 @@ pipeline {
     stage('Scan') {
       steps {
         withSonarQubeEnv(installationName: 'Bilgeadam_Sonarqube') { 
-          sh 'sonar:sonar'
+          sh 'clean verify sonar:sonar'
         }
       }
     }
